@@ -1,0 +1,171 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    color: #fff;
+}
+
+.detail {
+    padding-left: 30px;
+    padding-top: 40px;
+    width: 1250px;
+    height: 680px;
+    background: url(./../public/images/ZJDXdetail/sever_bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+#movies ::after {
+    display: inline-block;
+    content: "";
+    clear: both;
+}
+
+.movies {
+    position: relative;
+    left: 86px;
+    top: 48px;
+}
+
+.movies .detail_img {
+    margin-top: 100px;
+}
+
+.movies .detail_right .detail_name {
+    margin-left: -310px;
+}
+
+.movies .detail_right .detail_ident {
+    margin-top: 30px;
+}
+
+.movies .detail_right .introduce {
+    width: 630px;
+}
+
+.movies .detail_right .play_click {
+    margin-top: 116px;
+}
+
+.detail_img {
+    width: 286px;
+    height: 404px;
+    float: left;
+    margin-left: 32px;
+
+}
+
+.detail_right {
+    float: left;
+    width: 800px;
+    margin-left: 30px;
+}
+
+.detail_name {
+    height: 82px;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.detail_ident {
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.detail_ident span {
+    font-size: 30px;
+    line-height: 32px;
+}
+
+.introduce {
+    height: 92px;
+    color: white;
+    font-size: 24px;
+    opacity: 0.6;
+    overflow: hidden;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.director {
+    height: 28px;
+    color: white;
+    font-size: 24px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+.play_click {
+    /* position: absolute; */
+    margin-top: 40px;
+}
+
+.play_click div {
+    float: left;
+    width: 253px;
+    height: 60px;
+    font-size: 32px;
+    line-height: 60px;
+    background-size: 100% 100%;
+}
+
+#play {
+    background: url(./../public/images/ZJDXdetail/play.png) no-repeat;
+    margin-right: 15px;
+}
+
+#isOrder {
+    background: url(./../public/images/ZJDXdetail/order.png) no-repeat;
+}
+
+.detail_text {
+    font-size: 32px;
+    width: 191px;
+    height: 32px;
+    position: absolute;
+    left: 60px;
+    top: 476px;
+}
+
+.detail_list {
+    position: absolute;
+    left: 58px;
+    top: 526px;
+}
+
+.list_class {
+    width: 111px;
+    height: 52px;
+    float: left;
+    line-height: 52px;
+    text-align: center;
+    background: url(./../public/images/ZJDXdetail/list.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 6px;
+    font-size: 30px;
+}
+
+.details_lists {
+    overflow: hidden;
+    width: 1168px;
+    height: 45px;
+    position: absolute;
+    left: 58px;
+    top: 586px;
+}
+
+.details_list {
+    width: 200%;
+    position: absolute;
+}
+
+.details_list div {
+    width: 228px;
+    height: 38px;
+    float: left;
+    line-height: 38px;
+    text-align: center;
+    background: url(./../public/images/ZJDXdetail/list.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 6px;
+    font-size: 30px;
+}

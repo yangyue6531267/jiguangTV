@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="page-view-size" content="1280*720">
+  <title>筛选页</title>
+  <script>
+    document.write('<link rel="stylesheet" href="./filter.css?' + Math.random() + '">')
+  </script>
+</head>
+
+<body -onload="init()">
+  <div class="filter">
+    <!-- 左侧块块 -->
+    <div class="filter-left">
+      <div id="title" class="title">筛选内容</div>
+      <div class="filter-0">
+        <div class="filter-0-select"></div>
+        <ul id="filter-0">
+          <li categoryid='' class="hover">推荐</li>
+        </ul>
+      </div>
+      <div class="filter-1">
+        <ul id="filter-1">
+          <li categoryid='' class="hover">全部</li>
+        </ul>
+      </div>
+      <div class="filter-2">
+        <ul id="filter-2">
+          <li categoryid='' class="hover">地区</li>
+        </ul>
+      </div>
+      <div class="filter-3">
+        <ul id="filter-3">
+          <li categoryid='' class="hover">年份</li>
+        </ul>
+      </div>
+      <div class="filter-4">
+        <ul id="filter-4">
+          <li categoryid='' class="hover">排序</li>
+        </ul>
+      </div>
+      <div class="filter-select"><span></span></div>
+    </div>
+    <!-- 右侧块块 -->
+    <div class="filter-right">
+      <div class="up"></div>
+      <div class="down"></div>
+
+      <div class="content">
+        <div class="list">
+          <ul id="list">
+            <!-- <li>
+              <div class="list-img"><div class="list-vip">VIP</div></div>
+              <div class="list-title">我是标题哈哈1</div>
+            </li>
+            <li>
+              <div class="list-img"></div>
+              <div class="list-title">我是标题哈哈2</div>
+            </li>
+            <li>
+              <div class="list-img"><div class="list-vip">VIP</div></div>
+              <div class="list-title">我是标题哈哈3</div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="scroll">
+        <div class="scroll-num">0/0</div>
+        <div class="scroll-bar">
+          <div class="bar-inside"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  document.write('<script src="../public/js/jquery.min.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/js.cookie.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/keyPress.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/util.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/interface.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="./filter.js?' + Math.random() + '"><\/script>')
+</script>
+
+</html>

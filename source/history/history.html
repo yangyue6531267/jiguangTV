@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="page-view-size" content="1280*720" />
+  <title>收藏历史页</title>
+  <script>
+    document.write('<link rel="stylesheet" href="../public/css/common.css?' + Math.random() + '">')
+    document.write('<link rel="stylesheet" href="./history.css?' + Math.random() + '">')
+  </script>
+</head>
+
+<body>
+  <div class="history" id="contentBox">
+    <!-- 左侧块块 -->
+    <div class="history-left">
+      <div class="title">记录/收藏</div>
+      <div class="nav-connent" id="nav-connent">
+        <div class="change-bg"></div>
+      </div>
+      <div class="filter">
+        <ul class="filter-connect" id="keycode-connect">
+          <li class="keycode-li-0" id="keycode0">我的收藏</li>
+          <li class="keycode-li-1" id="keycode1">我的记录</li>
+        </ul>
+      </div>
+      <div class="filter-select"><span></span></div>
+    </div>
+    <!-- 右侧块块 -->
+    <div class="history-right">
+
+      <div id="hisClear" class="clear">清空记录</div>
+      <div class="top-c" id="top-c">暂无内容</div>
+      <div class="up" id="upCorner"></div>
+      <div class="down" id="downCorner"></div>
+
+      <div class="content">
+        <div class="list">
+          <ul class='content-ul' id="history-connent">
+          </ul>
+        </div>
+      </div>
+      <div class="history-scroll" id="history-scroll">
+        <div class="history-bar" id="history-bar" style="top: 0px;"></div>
+      </div>
+      <div class="history-num" id="history-num"></div>
+      <!-- <div class="scroll">
+        <div class="scroll-num" id="history-num">0/0</div>
+        <div class="scroll-bar" id="history-scroll">
+          <div class=" bar-inside slider" id="history-bar"></div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  document.write('<script src="../public/js/js.cookie.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/keyPress.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/ajax.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/util.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/interface.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/logApi.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="./content_History.js?=' + Math.random() + '" ><\/script>')
+  document.write('<script src="./index.js?adv=' + Math.random() + '" ><\/script>')
+</script>
+
+</html>

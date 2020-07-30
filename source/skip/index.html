@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拉起播放器</title>
+    <style>
+        body {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box0 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            left: 200px;
+            top: 259px;
+            border-radius: 15px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            left: 800px;
+            top: 259px;
+            border-radius: 15px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            left: 520px;
+            top: 259px;
+            border-radius: 15px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #text {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 400px;
+            top: 500px;
+            color: red;
+        }
+
+        .active {
+            border: 4px solid white;
+            box-shadow: 10px 10px 10px #000;
+        }
+    </style>
+</head>
+
+<body bgcolor="rgb(69,137,148)">
+    <a href="yanhua://epg/launch?pageUrl=https://www.baidu.com" style="font-size: 30px;"> 点击我打开应用</a>
+    <div class="box1">按"确定"调用播放apk</div>
+    <div class="box0 active">按"确定"调起apk</div>
+    <div class="box2">按键</div>
+    <div id="text"></div>
+    <script>
+        var KEYMAP = {
+            13: "enter",
+            37: "left",
+            39: "right",
+        };
+        var onKeyPress;
+        var grepEvent = function (e) {
+            var keyCode = e.keyCode || e.which;
+            return onKeyPress(KEYMAP[keyCode]);
+        };
+        var DOME = {
+            item: 0,
+            enter: function () {
+                if (this.item == 0) {
+                    // var json = {
+                    //     uesrId: Authentication.CTCGetConfig('UserID'),
+                    //     NetUserID: Authentication.CTCGetConfig('NetUserID'),
+                    //     STBID: Authentication.CTCGetConfig('STBID'),
+                    //     UserToken: Authentication.CTCGetConfig("UserToken"),
+                    //     SessionID: Authentication.CTCGetConfig("SessionID"),
+                    //     shareKey: Authentication.CTCGetConfig("shareKey"),
+                    //     EPGGroupNMB: Authentication.CTCGetConfig("EPGGroupNMB"),
+                    //     UserGroupNMB: Authentication.CTCGetConfig("UserGroupNMB"),
+                    //     EPGDomain: Authentication.CTCGetConfig("EPGDomain"),
+                    //     identityEncode: Authentication.CTCGetConfig("identityEncode"),
+                    //     MAC: Authentication.CTCGetConfig("MAC"),
+                    //     IP: Authentication.CTCGetConfig("IP")
+                    // }
+                    var appName = 'com.yanhua.tv.jiguang';
+                    var className = 'com.yanhua.tv.yhweb.Dispatcher';
+                    var city = '';
+                    var userId = '';
+                    var EPGUrl = '';
+                    var EPGGroupNMB = '';
+                    var userId = '';
+                    var STBType = '0'
+                    var pageUrl =
+                        'http://220.191.136.42:33200/EPG/jsp/gdhdpublictest/Ver.1/demoModule/picture1080test.jsp'
+
+                    STBAppManager.startAppByIntent(
+                        '{"intentType":0, "appName":"' + appName + '", "className":"' +
+                        className + '", "extra":[{"name":"pageUrl","value":"' +
+                        pageUrl + '"},{"name":"city","value":"' + city +
+                        '"},{"name":"userId","value":"' + userId +
+                        '"},{"name":"EPGUrl","value":"' + EPGUrl +
+                        '"},{"name":"EPGGroupNMB","value":"' + EPGGroupNMB +
+                        '"},{"name":"UserID","value":"' + userId +
+                        '"},{"name":"STBType","value":"' + STBType + '"}]}')
+
+                    document.getElementById('text').innerHTML =
+                        "userID:" + Authentication.CTCGetConfig('UserID') +
+                        "UserGroupNMB:" + Authentication.CTCGetConfig("UserGroupNMB") +
+                        "EPGDomain:" + Authentication.CTCGetConfig("EPGDomain")
+                } else if (this.item == 1) {
+                    // var json = {
+                    //     title: '天火',
+                    //     jsonUrl: 'rtmp://live.hkstv.hk.lxdns.com/live/hks'
+                    // }
+                    // Utility.setValueByName('playUrl', JSON.stringify(json));
+                    // this.jump();
+                    window.location.href =
+                        "yanhua://epg/launch?pageUrl=http://220.191.136.42:33200/EPG/jsp/gdhdpublictest/Ver.1/demoModule/picture1080test.jsp";
+                } else if (this.item == 2) {
+                    var linkUrl =
+                        'http://220.191.136.42:33200/EPG/jsp/gdhdpublictest/Ver.1/demoModule/picture1080test.jsp';
+                    window.location.href = "com.yanhua.tv.jiguang://splash?srcch=10000003&linkUrl=" + linkUrl;
+                }
+            },
+            left: function () {
+                if (this.item == 0) return
+                document.getElementsByClassName('box' + this.item)[0].classList.remove("active");
+                this.item--;
+                document.getElementsByClassName('box' + this.item)[0].classList.add("active");
+            },
+            right: function () {
+                document.getElementsByClassName('box' + this.item)[0].classList.remove("active");
+                if (this.item == 2) return
+                this.item++;
+                document.getElementsByClassName('box' + this.item)[0].classList.add("active");
+            },
+            jump: function () {
+                var json = {
+                    intentType: 0,
+                    appName: "com.toltech.appstore",
+                    className: "com.toltech.appstore.activity.MainActivity",
+                    extra: [{
+                        "name": "ids",
+                        "value": "1049"
+                    }]
+                }
+                document.getElementById('text').innerHTML = JSON.stringify(json);
+                try {
+                    document.getElementById('text').innerHTML = JSON.stringify(json) + '跳转前：';
+                    STBAppManager.startAppByIntent(JSON.stringify(json));
+                    document.getElementById('text').innerHTML = JSON.stringify(json) + '成功：';
+                } catch (error) {
+                    document.getElementById('text').innerHTML = JSON.stringify(json) + '报错：' + error;
+                }
+            },
+            jump2: function () {
+                try {
+                    document.getElementById('text').innerHTML = 'jump2跳转前';
+                    STBAppManager.startAppByIntent(
+                        "{\"intentType\":0,\"appName\":\"com.toltech.appstore\", \"className\":\"com.toltech.appstore.activity.MainActivity \", \"extra\":[{\"name\":\"ids\",\"value\":\"1049\"}]}"
+                    );
+                    document.getElementById('text').innerHTML = 'jump2跳转后';
+                } catch (error) {
+                    document.getElementById('text').innerHTML = 'jump2跳转报错：' + JSON.stringify(error);
+                }
+            }
+        }
+        onKeyPress = function (keyCode) {
+            switch (keyCode) {
+                case "enter":
+                    DOME.enter();
+                    break;
+                case "left":
+                    DOME.left();
+                    break;
+                case 'right':
+                    DOME.right();
+                    break;
+            }
+        };
+        //事件绑定
+        document.onkeydown = grepEvent;
+    </script>
+</body>
+
+
+</html>

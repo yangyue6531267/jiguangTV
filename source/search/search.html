@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="page-view-size" content="1280*720">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>搜索页</title>
+  <script>
+    document.write('<link rel="stylesheet" href="../public/css/common.css?' + Math.random() + '">')
+    document.write('<link rel="stylesheet" href="./search.css?' + Math.random() + '">')
+  </script>
+</head>
+
+<body -onload="init()">
+  <div class="search">
+    <!-- 左侧块块 -->
+    <div class="search-left">
+      <div class="title">搜索</div>
+      <div class="keyboard">
+        <div id="keyboard-input" class="keyboard-input"></div>
+        <div id="keyboard-delete" class="keyboard-delete">删除</div>
+        <ul id="keyboard-content" class="keyboard-content"></ul>
+      </div>
+      <div class="tips">
+        <div class="triangle"></div>
+        <div class="text"><span>输入拼音首写字母搜索相关电影、剧集、演员、导演</span></div>
+      </div>
+      <div class="search-select"><span></span></div>
+    </div>
+    <!-- 右侧块块 -->
+    <div class="search-right">
+      <div class="up"></div>
+      <div class="down"></div>
+      <div class="hot">
+        <div class="hot-title">
+          <div class="dian"></div>热搜榜单
+        </div>
+        <ul id="hot-list" class="hot-list">
+          <!-- <li>
+            <div class="hot-img"></div>
+            <div class="hot-title">蝙蝠侠</div>
+          </li> -->
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="list">
+          <ul id="list">
+            <!-- <li>
+              <div class="list-img"><div class="list-vip">VIP</div></div>
+              <div class="list-title">我是标题哈哈1</div>
+            </li>
+            <li>
+              <div class="list-img"></div>
+              <div class="list-title">我是标题哈哈2</div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="scroll">
+        <div class="scroll-num">0/0</div>
+        <div class="scroll-bar">
+          <div class="bar-inside"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  document.write('<script src="../public/js/jquery.min.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/ajax.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/js.cookie.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/keyPress.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/util.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/interface.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/logApi.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="../public/js/ZJDXLog.js?' + Math.random() + '"><\/script>')
+  document.write('<script src="./search.js?' + Math.random() + '"><\/script>')
+</script>
+
+</html>

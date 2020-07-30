@@ -1,0 +1,481 @@
+.play_top {
+    width: 1280px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.play_top div span {
+    color: white;
+    line-height: 80px;
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px
+}
+
+html {
+    background-color: transparent;
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+}
+
+body {
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+}
+
+.play_top div span:nth-child(1) {
+    margin-left: 98px;
+    font-size: 25px;
+}
+
+.play_top div span:nth-child(2) {
+    margin-left: 25px;
+    font-size: 20px;
+}
+
+#play_center {
+    width: 1280px;
+    height: 720px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.1);
+    display: none;
+    /* display: none; */
+}
+
+#play_center #play_stop {
+    width: 220px;
+    height: 199px;
+    background: url(./../public/images/play/stop.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -100px;
+}
+
+.play_bottom {
+    width: 1280px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.allLong {
+    width: 993px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 140px;
+    bottom: 33px;
+    border-radius: 18px;
+}
+
+.time {
+    font-size: 22px;
+    position: absolute;
+    right: 30px;
+    top: 26px;
+    color: white;
+}
+
+#allLongs {
+    width: 0%;
+    height: 16px;
+    background: rgb(222, 76, 76);
+    position: absolute;
+    left: 140px;
+    bottom: 32px;
+    border-radius: 15px;
+}
+
+#allLongs #play_icon {
+    width: 16px;
+    height: 16px;
+    background: rgb(222, 76, 76);
+    position: absolute;
+    z-index: 20;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 15px;
+}
+
+.iconRaudi {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    position: absolute;
+    z-index: 99;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+}
+
+.play_carsetime {
+    color: #fff;
+    position: absolute;
+    left: 30px;
+    top: 26px;
+    font-size: 22px;
+}
+
+.moveTime {
+    background: url(./../public/images/play/move.png) no-repeat;
+    background-size: 100% 100%;
+    width: 143px;
+    height: 62px;
+    position: absolute;
+    left: -24px;
+    top: -64px;
+    text-align: center;
+    line-height: 62px;
+    display: none;
+    color: white;
+    font-size: 25px;
+}
+
+.pint_word {
+    width: 58px;
+    height: 36px;
+    font-size: 25px;
+    font-family: PingFang HK;
+    font-weight: 500;
+    line-height: 36px;
+    color: rgba(255, 255, 255);
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    opacity: 1;
+    float: left;
+    margin-right: 16px;
+}
+
+.PList {
+    position: absolute;
+    left: 60px;
+    top: 625px;
+    display: none;
+}
+
+.play_pint {
+    width: 4px;
+    height: 50px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    opacity: 1;
+    border-radius: 5px 5px 0px 0px;
+    float: left;
+}
+
+.pint_left {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 1);
+    opacity: 1;
+    border-radius: 15px;
+    margin-top: 23px;
+    margin-left: -5px;
+}
+
+.play_intNumber {
+    width: 1048px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    border-radius: 15px;
+    margin-left: 40px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+.play_indexNumber {
+    width: 103px;
+    height: 50px;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.play_indexNumber img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 70px;
+    top: 0px;
+}
+
+.play_int {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.play_indexNumber.active {
+    background: rgba(222, 76, 76, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    border-radius: 15px;
+}
+
+.play_indexNumber.change {
+    color: rgba(254, 205, 1, 1);
+
+}
+
+.icon {
+    width: 13px;
+    height: 13px;
+    background: rgba(254, 205, 1, 1);
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    left: 22px;
+    top: 19px;
+    display: none;
+}
+
+.play-zongyi {
+    width: 1057px;
+    height: 101px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    border-radius: 15px;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 40px;
+    margin-top: -26px;
+    float: left;
+    display: none;
+    overflow: hidden;
+}
+
+.zongyi_list {
+    width: 10000%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.zongyi_Number {
+    width: 253px;
+    height: 102px;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    position: relative;
+    line-height: 102px;
+}
+
+.zongyi_Number img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 220px;
+    top: -2px;
+}
+
+
+.zongyi_Number.active {
+    background: rgba(222, 76, 76, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    border-radius: 15px;
+}
+
+.zongyi_Number p.textChange {
+    text-overflow: clip;
+}
+
+.zongyi_Number p {
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.zongyi_Number.change {
+    color: rgba(254, 205, 1, 1);
+}
+
+.debugBack {
+    width: 1280px;
+    height: 720px;
+    background: url(../public/images/play/debug.png);
+    position: relative;
+    left: 0px;
+    top: -80px;
+    display: none;
+}
+
+.backFirm {
+    position: absolute;
+    left: 0px;
+    bottom: 100px;
+    display: none;
+}
+
+.backFirm div {
+    position: absolute;
+    top: 0px;
+}
+
+.isBack {
+    width: 224px;
+    height: 60px;
+    background: rgb(74, 71, 71);
+    border-radius: 15px;
+    font-size: 22px;
+    font-family: Helvetica Neue;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    line-height: 60px;
+    color: rgba(255, 255, 255, 1);
+    left: 29px;
+}
+
+.backFirm .raduit {
+    width: 13px;
+    height: 13px;
+    background: rgb(74, 71, 71);
+    border-radius: 50%;
+    left: 10px;
+    top: 25px;
+}
+
+.backTrue {
+    width: 150px;
+    height: 60px;
+    background: rgb(74, 71, 71);
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 21px;
+    line-height: 60px;
+    left: 267px;
+    color: white;
+}
+
+.backFalse {
+    width: 150px;
+    height: 60px;
+    background: rgb(74, 71, 71);
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 21px;
+    left: 432px;
+    color: white;
+}
+
+.backFalse span {
+    width: 35px;
+    height: 20px;
+    background: red;
+}
+
+.backTrue span {
+    width: 27px;
+    height: 27px;
+    background: red;
+}
+
+
+.backFirm .backFalse.active,
+.backFirm .backTrue.active {
+    background: rgba(222, 76, 76, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 30px 40px rgba(0, 0, 0);
+    top: -2px;
+}
+
+#loading {
+    width: 1280px;
+    height: 720px;
+    background: url(../public/images/play/bg.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 9999;
+}
+
+#loading .loading_img {
+    background: url(../public/images/play/leng.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 239px;
+    top: 357px;
+    width: 802px;
+    height: 6px;
+}
+
+#loading .loading_text {
+    font-size: 25px;
+    color: rgb(255, 147, 0);
+    position: absolute;
+    left: 580px;
+    top: 378px;
+}
+
+#textVideo {
+    width: 800px;
+    font-size: 40px;
+    color: rgb(255, 147, 0);
+    font-weight: 20px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+/* 
+#textindex {
+    width: 240px;
+    font-size: 40px;
+    color: rgb(255, 147, 0);
+    font-weight: 20px;
+    float: left;
+    margin-left: 20px;
+} */
+
+.textload {
+    position: absolute;
+    top: 291px;
+    width: 1280px;
+}
+
+#firstHistoryinfo {
+    width: 460px;
+    height: 60px;
+    font-size: 20px;
+    color: #fff;
+    background: rgb(255, 147, 0);
+    text-align: center;
+    line-height: 60px;
+    border-radius: 15px;
+    position: relative;
+    left: 20px;
+    top: 490px;
+    display: none;
+}

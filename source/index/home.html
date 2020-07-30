@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="page-view-size" content="1280*720" />
+  <title>跳转页</title>
+  <script type="text/javascript">
+    document.write('<link rel="stylesheet" href="../../source/index/index.css?adv=' + Math.random() + '"">')
+  </script>
+
+</head>
+
+<body>
+  <div id='advert' class='advert'>
+    <!-- <div id="allTime" class="all-time">5 S后返回</div> -->
+    <div class="advert-title">极光TV</div>
+    <!-- 版本号 -->
+    <div class="version">v1.0.004.20200316143650</div>
+    <!-- 升级DOM -->
+    <div id="upload" class="upload">
+      <div class="upload-name">升级提示</div>
+      <div class="upload-header">监测到XXX版本</div>
+      <div class="upload-content">
+        <p>1、优化了XXX功能；各种更新文案XXXXXX</p>
+        <p>2、XXXXX</p>
+      </div>
+      <div class="buttom buttom-ok  hover" id='buttom1'>升级</div>
+      <div class="buttom buttom-cancel" id='buttom2'>退出</div>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+  document.write('<script src="../public/js/ajax.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="../../source/public/js/util.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="../../source/public/js/js.cookie.js?adv=' + Math.random() + '"><\/script>')
+  document.write('<script src="../../source/public/js/logApi.js?adv=' + Math.random() + '"><\/script>')
+</script>
+
+<script>
+  function next() {
+    //外链跳转专题页面
+    if (getParam('epg_info')) {
+      var backType = decodeURIComponent(getParam('epg_info').split("page_url")[1]).slice(1);
+      var backTypes = backType.substring(0, backType.length - 2);
+      Cookies.set("backLauncherkUrl", backTypes, { path: '/' })
+    }
+
+    var biType = '';
+    // var url = './source/index/index.html'
+    // if (getParam('specialId')) {
+    //   biType = '0202';
+    //   url = './source/special/index.html';
+    //   var specialUrl = baseUrl + 'p=yhSpecialDetail&k=1&v=1&topicId=' + getParam("specialId") + '&c=15';
+    //   Cookies.set('detailUrl', specialUrl, {
+    //     path: '/'
+    //   })
+    // } else if (getParam('assetId')) {
+    //   biType = '0201';
+    //   url = './source/detail/detail.html';
+    //   var assetIdUrl = baseUrl + 'p=yhAssetDetail&k=1&v=1&assetId=' + getParam("assetId") + '&c=15';
+    //   Cookies.set('detailUrl', assetIdUrl, {
+    //     path: '/'
+    //   })
+    // } else {
+    Cookies.set('epg', getParam('epg_info'), {
+      path: '/'
+    })
+    Cookies.set('UserToken', getParam('UserToken'), {
+      path: '/'
+    })
+    var url = './home1.html';
+    // }
+    try {
+      // 首页页面访问埋点
+      console.log('bi 首页页面访问埋点')
+      bi.start(biType, "", "", "1");
+    } catch (error) {
+      console.log('埋点错误', error)
+    }
+    //避免异步埋点未发出
+    setTimeout(function () {
+      window.location.replace(url);
+    }, 200);
+  }
+  next();
+</script>
+
+</html>

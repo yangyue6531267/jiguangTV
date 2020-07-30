@@ -1,0 +1,73 @@
+/* 预加载 loading动画 */
+@-webkit-keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/* 焦点选中呼吸效果  使用如下例子
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    animation: breathe 5s linear 5s infinite;
+    -webkit-animation: breathe 5s linear 5s infinite;
+ */
+@-webkit-keyframes breathe {
+    0% {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+}
+
+/* 滑动效果 */
+.slider {
+    /* transition: all 2s cubic-bezier(0, 1, 0.5, 1); */
+    /* -webkit-transition: all 2s cubic-bezier(0, 1, 0.5, 1); */
+    /*  Webkit内核浏览器：Safari and Chrome*/
+    /* -webkit-transition-property: all;
+    -webkit-transition-duration: .4s;
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1); */
+    /*  Mozilla内核浏览器：firefox3.5+*/
+    /* -moz-transition-property: all;
+    -moz-transition-duration: .4s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1); */
+    /*  Opera*/
+    /* -o-transition-property: all;
+    -o-transition-duration: .4s;
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1); */
+    /*  IE9*/
+    /* -ms-transition-property: all;
+    -ms-transition-duration: .4s;
+    -ms-transition-timing-function: cubic-bezier(0, 1, 0.5, 1); */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="page-view-size" content="1280*720">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <title>详情页1</title>
+    <link rel="stylesheet" href="./ZXDXdetail.css?v=3">
+</head>
+
+<body style="width: 1200px;height: 720px;overflow: hidden;">
+    <div class="detail" id="detail">
+        <div id="movies">
+            <img src="./../public/images/detail/2084.png" class="detail_img" id="detail_img">
+            <div class="detail_right">
+                <div class="detail_name" id="detail_name"></div>
+                <div class="detail_ident">
+                    <span style="color: #f39800;">VIP</span>
+                    <span id="year"></span>
+                    <span id="listItem"></span>
+                </div>
+                <div class="introduce" id="introduce">
+                </div>
+                <div class="director" id="director"></div>
+                <div class="director" id='actor'></div>
+                <div class="play_click">
+                    <div id="play"></div>
+                    <div id="isOrder"></div>
+                </div>
+            </div>
+            <p class="detail_text" id="detail_text">选集</p>
+            <div class="detail_list" id="detail_list">
+            </div>
+            <div class="details_lists">
+                <div class="details_list" id="details_list">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="../public/js/js.cookie.js"></script>
+    <script src="./../public/js/jquery.min.js"></script>
+    <script src="./../public/js/md5.js"></script>
+    <script src="./../public/js/keyPress.js"></script>
+    <script src="./../public/js/ajax.js"></script>
+    <script src="./../public/js/util.js?v=1"></script>
+    <script src="./../public/js/play.js"></script>
+    <script src="./../public/js/interface.js?v=121"></script>
+    <script>
+        document.write('<script src="../public/js/logApi.js?adv=' + Math.random() + '"><\/script>')
+        document.write('<script src="../public/js/ZJDXLog.js?adv=' + Math.random() + '"><\/script>')
+        document.write('<script src="./detail.js?v=' + Math.random() + '"><\/script>')
+    </script>
+</body>
+
+</html>
